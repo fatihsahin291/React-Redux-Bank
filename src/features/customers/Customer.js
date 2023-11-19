@@ -5,8 +5,6 @@ function Customer() {
 		(state) => state.customer.fullName
 	);
 
-	console.log(customer);
-
 	return <h2>👋 Welcome, {customer}</h2>;
 }
 
