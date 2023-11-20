@@ -3,6 +3,7 @@ import {
 	combineReducers,
 	createStore,
 } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
 import AccountReducer from "./features/accounts/accountSlice";
@@ -15,7 +16,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
 	rootReducer,
-	applyMiddleware(thunk)
+	composeWithDevTools(applyMiddleware(thunk))
 );
 
 export default store;
